@@ -7,4 +7,6 @@ You can run the code on Colab [here](https://colab.research.google.com/drive/1GY
 * Tableau Data Prep Flow File
 <img src="DataPrep.png" height=200>
 
-* Tableau Packaged NoteBook which contains different charts.
+* Tableau Packaged NoteBook which contains different charts. You can see an uploaded version on Tableau Public [here](https://public.tableau.com/app/profile/bacem.ben.daly)
+
+
