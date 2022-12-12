@@ -1,0 +1,1258 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20222.22.0812.0353                               -->
+<workbook original-version='18.1' source-build='2022.2.1 (20222.22.0812.0353)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <VizInTooltipHideWorksheet />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Cryptocurrency' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Bitcoin&quot;'>
+        <calculation class='tableau' formula='&quot;Bitcoin&quot;' />
+        <members>
+          <member value='&quot;Dogecoin&quot;' />
+          <member value='&quot;Bitcoin&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='DataTest' inline='true' name='federated.1cbchst07mfctd126ic9g0j1zk4d' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='DataTest' name='textscan.0ad8u4f0uat71p13mlydq1et9fjo'>
+            <connection class='textscan' directory='Data/Sentimental Analysis Twitter' filename='Output 3.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0ad8u4f0uat71p13mlydq1et9fjo' name='Output.csv' table='[Output#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Table Names' ordinal='0' />
+            <column datatype='integer' name='SNo' ordinal='1' />
+            <column datatype='string' name='Name' ordinal='2' />
+            <column datatype='string' name='Symbol' ordinal='3' />
+            <column datatype='date' name='Date-1' ordinal='4' />
+            <column datatype='real' name='High' ordinal='5' />
+            <column datatype='real' name='Low' ordinal='6' />
+            <column datatype='real' name='Open' ordinal='7' />
+            <column datatype='real' name='Close' ordinal='8' />
+            <column datatype='integer' name='Volume' ordinal='9' />
+            <column datatype='real' name='Marketcap' ordinal='10' />
+            <column datatype='string' name='F1' ordinal='11' />
+            <column datatype='string' name='Date' ordinal='12' />
+            <column datatype='string' name='User' ordinal='13' />
+            <column datatype='string' name='Tweet' ordinal='14' />
+            <column datatype='integer' name='Like_Count' ordinal='15' />
+            <column datatype='integer' name='Retweet_Count' ordinal='16' />
+            <column datatype='string' name='hashtag' ordinal='17' />
+            <column datatype='string' name='new_tweet' ordinal='18' />
+            <column datatype='string' name='label' ordinal='19' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0ad8u4f0uat71p13mlydq1et9fjo' name='Output.csv' table='[Output#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Table Names' ordinal='0' />
+            <column datatype='integer' name='SNo' ordinal='1' />
+            <column datatype='string' name='Name' ordinal='2' />
+            <column datatype='string' name='Symbol' ordinal='3' />
+            <column datatype='date' name='Date-1' ordinal='4' />
+            <column datatype='real' name='High' ordinal='5' />
+            <column datatype='real' name='Low' ordinal='6' />
+            <column datatype='real' name='Open' ordinal='7' />
+            <column datatype='real' name='Close' ordinal='8' />
+            <column datatype='integer' name='Volume' ordinal='9' />
+            <column datatype='real' name='Marketcap' ordinal='10' />
+            <column datatype='string' name='F1' ordinal='11' />
+            <column datatype='string' name='Date' ordinal='12' />
+            <column datatype='string' name='User' ordinal='13' />
+            <column datatype='string' name='Tweet' ordinal='14' />
+            <column datatype='integer' name='Like_Count' ordinal='15' />
+            <column datatype='integer' name='Retweet_Count' ordinal='16' />
+            <column datatype='string' name='hashtag' ordinal='17' />
+            <column datatype='string' name='new_tweet' ordinal='18' />
+            <column datatype='string' name='label' ordinal='19' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Names]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Table Names</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SNo</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SNo]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>SNo</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Symbol</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Symbol]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Symbol</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date-1</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date-1]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Date-1</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>High</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[High]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>High</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Low</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Low]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Low</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Open</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Open]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Open</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Close</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Close]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Close</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Volume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Volume]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Volume</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Marketcap</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Marketcap]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Marketcap</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>User</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[User]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>User</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tweet</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Tweet]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Tweet</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Like_Count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Like_Count]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Like_Count</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>1</approx-count>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Retweet_Count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Retweet_Count]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Retweet_Count</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>1</approx-count>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hashtag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[hashtag]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>hashtag</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_tweet</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[new_tweet]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>new_tweet</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>label</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[label]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>label</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Calculation1' datatype='real' name='[Calculation_1899111698982244352]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='IF NOT ISNULL([Tweet]) THEN [High] END' />
+      </column>
+      <column caption='Placeholder' datatype='integer' name='[Calculation_297519082170904576]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='MIN(0)' />
+      </column>
+      <column caption='Date-11' datatype='date' name='[Date-1]' role='dimension' type='ordinal' />
+      <column datatype='real' name='[High]' role='measure' type='quantitative' />
+      <column aggregation='CountD' caption='Like Count' datatype='integer' name='[Like_Count]' role='measure' type='quantitative' />
+      <column caption='Name1' datatype='string' name='[Name]' role='dimension' type='nominal' />
+      <column caption='Retweet Count' datatype='integer' name='[Retweet_Count]' role='measure' type='quantitative' />
+      <column caption='S No' datatype='integer' name='[SNo]' role='measure' type='quantitative' />
+      <column caption='Tweet1' datatype='string' name='[Tweet]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Output.csv' datatype='table' name='[__tableau_internal_object_id__].[Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99]' role='measure' type='quantitative' />
+      <column caption='Hashtag' datatype='string' name='[hashtag]' role='dimension' type='nominal' />
+      <column caption='Label' datatype='string' name='[label]' role='dimension' type='nominal' />
+      <column caption='New Tweet' datatype='string' name='[new_tweet]' role='dimension' type='nominal' />
+      <column-instance column='[label]' derivation='Attribute' name='[attr:label:nk]' pivot='key' type='nominal' />
+      <column-instance column='[label]' derivation='None' name='[none:label:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_1899111698982244352]' derivation='Sum' name='[sum:Calculation_1899111698982244352:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[High]' derivation='Sum' name='[sum:High:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Date-1]' derivation='Day-Trunc' name='[tdy:Date-1:ok]' pivot='key' type='ordinal' />
+      <group caption='Tooltip (DAY(Date-1),Label)' hidden='true' name='[Tooltip (DAY(Date-1),Label)]' name-style='unqualified' user:auto-column='sheet_link' user:ui-vit-column='true'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[tdy:Date-1:ok]' />
+          <groupfilter function='level-members' level='[label]' />
+        </groupfilter>
+      </group>
+      <group caption='Tooltip (DAY(Date-11),Label)' hidden='true' name='[Tooltip (DAY(Date-11),Label)]' name-style='unqualified' user:auto-column='sheet_link' user:ui-vit-column='true'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[tdy:Date-1:ok]' />
+          <groupfilter function='level-members' level='[label]' />
+        </groupfilter>
+      </group>
+      <group caption='Tooltip (DAY(Date-11),Tweet1,Label)' hidden='true' name='[Tooltip (DAY(Date-11),Tweet1,Label)]' name-style='unqualified' user:auto-column='sheet_link' user:ui-vit-column='true'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[tdy:Date-1:ok]' />
+          <groupfilter function='level-members' level='[Tweet]' />
+          <groupfilter function='level-members' level='[label]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='5769' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1cbchst07mfctd126ic9g0j1zk4d].[sum:High:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1cbchst07mfctd126ic9g0j1zk4d].[sum:Calculation_1899111698982244352:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[attr:label:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Neutral&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Positive&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Negative&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:label:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Neutral&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Positive&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Negative&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Tunisia&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Output.csv' id='Output.csv_B2417F99F7FD493FAD3EBA8DDCA7AA99'>
+            <properties context=''>
+              <relation connection='textscan.0ad8u4f0uat71p13mlydq1et9fjo' name='Output.csv' table='[Output#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Table Names' ordinal='0' />
+                  <column datatype='integer' name='SNo' ordinal='1' />
+                  <column datatype='string' name='Name' ordinal='2' />
+                  <column datatype='string' name='Symbol' ordinal='3' />
+                  <column datatype='date' name='Date-1' ordinal='4' />
+                  <column datatype='real' name='High' ordinal='5' />
+                  <column datatype='real' name='Low' ordinal='6' />
+                  <column datatype='real' name='Open' ordinal='7' />
+                  <column datatype='real' name='Close' ordinal='8' />
+                  <column datatype='integer' name='Volume' ordinal='9' />
+                  <column datatype='real' name='Marketcap' ordinal='10' />
+                  <column datatype='string' name='F1' ordinal='11' />
+                  <column datatype='string' name='Date' ordinal='12' />
+                  <column datatype='string' name='User' ordinal='13' />
+                  <column datatype='string' name='Tweet' ordinal='14' />
+                  <column datatype='integer' name='Like_Count' ordinal='15' />
+                  <column datatype='integer' name='Retweet_Count' ordinal='16' />
+                  <column datatype='string' name='hashtag' ordinal='17' />
+                  <column datatype='string' name='new_tweet' ordinal='18' />
+                  <column datatype='string' name='label' ordinal='19' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Combined'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DataTest' name='federated.1cbchst07mfctd126ic9g0j1zk4d' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Cryptocurrency' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Bitcoin&quot;'>
+              <calculation class='tableau' formula='&quot;Bitcoin&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1cbchst07mfctd126ic9g0j1zk4d'>
+            <column caption='Calculation1' datatype='real' name='[Calculation_1899111698982244352]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF NOT ISNULL([Tweet]) THEN [High] END' />
+            </column>
+            <column caption='Date-11' datatype='date' name='[Date-1]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[High]' role='measure' type='quantitative' />
+            <column caption='Name1' datatype='string' name='[Name]' role='dimension' type='nominal' />
+            <column caption='Tweet1' datatype='string' name='[Tweet]' role='dimension' type='nominal' />
+            <column-instance column='[Tweet]' derivation='Attribute' name='[attr:Tweet:nk]' pivot='key' type='nominal' />
+            <column caption='Label' datatype='string' name='[label]' role='dimension' type='nominal' />
+            <column-instance column='[Date-1]' derivation='None' name='[none:Date-1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Name]' derivation='None' name='[none:Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[label]' derivation='None' name='[none:label:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1899111698982244352]' derivation='Sum' name='[sum:Calculation_1899111698982244352:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[High]' derivation='Sum' name='[sum:High:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date-1]' derivation='Day-Trunc' name='[tdy:Date-1:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Date-1:qk]' included-values='in-range'>
+            <min>#2021-01-03#</min>
+            <max>#2021-07-06#</max>
+          </filter>
+          <filter class='categorical' column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Name:nk]'>
+            <groupfilter expression='[Name]=[Parameters].[Parameter 1]' function='filter' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:Name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Date-1:qk]</column>
+            <column>[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1cbchst07mfctd126ic9g0j1zk4d].[sum:High:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.1cbchst07mfctd126ic9g0j1zk4d].[tdy:Date-1:qk]' scope='cols' value='Date' />
+            <format attr='title' class='0' field='[federated.1cbchst07mfctd126ic9g0j1zk4d].[sum:Calculation_1899111698982244352:qk]' scope='rows' value='Price' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1cbchst07mfctd126ic9g0j1zk4d].[sum:Calculation_1899111698982244352:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:label:nk]' />
+              <tooltip column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[attr:Tweet:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Day of Date-1:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1cbchst07mfctd126ic9g0j1zk4d].[tdy:Date-1:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true'><![CDATA[<Sheet name="Tweet" maxwidth="300" maxheight="300" filter="<All Fields>">]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#000000' />
+                <format attr='size' value='1.4832596778869629' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1cbchst07mfctd126ic9g0j1zk4d].[sum:High:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1cbchst07mfctd126ic9g0j1zk4d].[sum:Calculation_1899111698982244352:qk] + [federated.1cbchst07mfctd126ic9g0j1zk4d].[sum:High:qk])</rows>
+        <cols>[federated.1cbchst07mfctd126ic9g0j1zk4d].[tdy:Date-1:qk]</cols>
+      </table>
+      <simple-id uuid='{E6A4A370-D51C-4C4A-A855-31DC5C04F0FB}' />
+    </worksheet>
+    <worksheet name='Price Change Over Time'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DataTest' name='federated.1cbchst07mfctd126ic9g0j1zk4d' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Cryptocurrency' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Bitcoin&quot;'>
+              <calculation class='tableau' formula='&quot;Bitcoin&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1cbchst07mfctd126ic9g0j1zk4d'>
+            <column caption='Date-11' datatype='date' name='[Date-1]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[High]' role='measure' type='quantitative' />
+            <column caption='Name1' datatype='string' name='[Name]' role='dimension' type='nominal' />
+            <column-instance column='[Date-1]' derivation='None' name='[none:Date-1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Name]' derivation='None' name='[none:Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[High]' derivation='Sum' name='[sum:High:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date-1]' derivation='Day-Trunc' name='[tdy:Date-1:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Date-1:qk]' included-values='in-range'>
+            <min>#2021-01-29#</min>
+            <max>#2021-07-06#</max>
+          </filter>
+          <filter class='categorical' column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Name:nk]'>
+            <groupfilter expression='[Name]=[Parameters].[Parameter 1]' function='filter' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:Name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Date-1:qk]</column>
+            <column>[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1cbchst07mfctd126ic9g0j1zk4d].[tdy:Date-1:qk]' scope='cols' value='' />
+            <format attr='title' class='0' field='[federated.1cbchst07mfctd126ic9g0j1zk4d].[sum:High:qk]' scope='rows' value='Price High' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-visibility' value='on' />
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-color' value='#000000' />
+            <format attr='stroke-size' value='2' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1cbchst07mfctd126ic9g0j1zk4d].[sum:High:qk]</rows>
+        <cols>[federated.1cbchst07mfctd126ic9g0j1zk4d].[tdy:Date-1:qk]</cols>
+      </table>
+      <simple-id uuid='{EDD2EABE-FD7A-4CAD-B22A-CE8CADCDD4F3}' />
+    </worksheet>
+    <worksheet name='Tweet'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DataTest' name='federated.1cbchst07mfctd126ic9g0j1zk4d' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1cbchst07mfctd126ic9g0j1zk4d'>
+            <column caption='Date-11' datatype='date' name='[Date-1]' role='dimension' type='ordinal' />
+            <column caption='Tweet1' datatype='string' name='[Tweet]' role='dimension' type='nominal' />
+            <column caption='Label' datatype='string' name='[label]' role='dimension' type='nominal' />
+            <column-instance column='[Tweet]' derivation='None' name='[none:Tweet:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date-1]' derivation='Day-Trunc' name='[tdy:Date-1:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[Tooltip (DAY(Date-1),Label)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action - Tweet]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[tdy:Date-1:ok]' />
+              <groupfilter function='level-members' level='[label]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[Tooltip (DAY(Date-11),Label)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action - Tweet]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[tdy:Date-1:ok]' />
+              <groupfilter function='level-members' level='[label]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[Tooltip (DAY(Date-11),Tweet1,Label)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action - Tweet]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[tdy:Date-1:ok]' />
+              <groupfilter function='level-members' level='[Tweet]' />
+              <groupfilter function='level-members' level='[label]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Tweet:nk]'>
+            <groupfilter function='level-members' level='[none:Tweet:nk]' user:ui-enumeration='all' user:ui-exclude='true' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Tweet:nk]</column>
+            <column>[federated.1cbchst07mfctd126ic9g0j1zk4d].[Tooltip (DAY(Date-1),Label)]</column>
+            <column>[federated.1cbchst07mfctd126ic9g0j1zk4d].[Tooltip (DAY(Date-11),Label)]</column>
+            <column>[federated.1cbchst07mfctd126ic9g0j1zk4d].[Tooltip (DAY(Date-11),Tweet1,Label)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Tweet:nk]' value='432' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Tweet:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{B35BAE0D-8CE7-44B1-A158-59B07FA53546}' />
+    </worksheet>
+    <worksheet name='Tweets Timeline'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DataTest' name='federated.1cbchst07mfctd126ic9g0j1zk4d' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Cryptocurrency' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Bitcoin&quot;'>
+              <calculation class='tableau' formula='&quot;Bitcoin&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1cbchst07mfctd126ic9g0j1zk4d'>
+            <column caption='Placeholder' datatype='integer' name='[Calculation_297519082170904576]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='MIN(0)' />
+            </column>
+            <column caption='Date-11' datatype='date' name='[Date-1]' role='dimension' type='ordinal' />
+            <column caption='Name1' datatype='string' name='[Name]' role='dimension' type='nominal' />
+            <column caption='Tweet1' datatype='string' name='[Tweet]' role='dimension' type='nominal' />
+            <column caption='Label' datatype='string' name='[label]' role='dimension' type='nominal' />
+            <column-instance column='[Date-1]' derivation='None' name='[none:Date-1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Name]' derivation='None' name='[none:Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Tweet]' derivation='None' name='[none:Tweet:nk]' pivot='key' type='nominal' />
+            <column-instance column='[label]' derivation='None' name='[none:label:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date-1]' derivation='Day-Trunc' name='[tdy:Date-1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_297519082170904576]' derivation='User' name='[usr:Calculation_297519082170904576:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Date-1:qk]' included-values='in-range'>
+            <min>#2021-01-29#</min>
+            <max>#2021-07-06#</max>
+          </filter>
+          <filter class='categorical' column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Name:nk]'>
+            <groupfilter expression='[Name]=[Parameters].[Parameter 1]' function='filter' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:Name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Tweet:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Tweet:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:Tweet:nk]' member='%null%' />
+                <groupfilter function='member' level='[none:Tweet:nk]' member='%null%' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Date-1:qk]</column>
+            <column>[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Tweet:nk]</column>
+            <column>[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.1cbchst07mfctd126ic9g0j1zk4d].[usr:Calculation_297519082170904576:qk]' value='52' />
+            <format attr='title' class='0' field='[federated.1cbchst07mfctd126ic9g0j1zk4d].[tdy:Date-1:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-visibility' value='on' />
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-color' value='#000000' />
+            <format attr='stroke-size' value='2' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:label:nk]' />
+              <lod column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Tweet:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1.3293370008468628' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1cbchst07mfctd126ic9g0j1zk4d].[usr:Calculation_297519082170904576:qk]</rows>
+        <cols>[federated.1cbchst07mfctd126ic9g0j1zk4d].[tdy:Date-1:qk]</cols>
+      </table>
+      <simple-id uuid='{ACA1121A-CF3D-40FE-A02A-C6D9D91A3D0F}' />
+    </worksheet>
+    <worksheet name='Tweets Trends'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Tweets Timeline with trend features
+</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DataTest' name='federated.1cbchst07mfctd126ic9g0j1zk4d' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Cryptocurrency' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Bitcoin&quot;'>
+              <calculation class='tableau' formula='&quot;Bitcoin&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1cbchst07mfctd126ic9g0j1zk4d'>
+            <column caption='Placeholder' datatype='integer' name='[Calculation_297519082170904576]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='MIN(0)' />
+            </column>
+            <column caption='Date-11' datatype='date' name='[Date-1]' role='dimension' type='ordinal' />
+            <column aggregation='CountD' caption='Like Count' datatype='integer' name='[Like_Count]' role='measure' type='quantitative' />
+            <column caption='Name1' datatype='string' name='[Name]' role='dimension' type='nominal' />
+            <column caption='Retweet Count' datatype='integer' name='[Retweet_Count]' role='measure' type='quantitative' />
+            <column caption='Tweet1' datatype='string' name='[Tweet]' role='dimension' type='nominal' />
+            <column-instance column='[Like_Count]' derivation='CountD' name='[ctd:Like_Count:qk]' pivot='key' type='quantitative' />
+            <column caption='Label' datatype='string' name='[label]' role='dimension' type='nominal' />
+            <column-instance column='[Date-1]' derivation='None' name='[none:Date-1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Name]' derivation='None' name='[none:Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Tweet]' derivation='None' name='[none:Tweet:nk]' pivot='key' type='nominal' />
+            <column-instance column='[label]' derivation='None' name='[none:label:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Retweet_Count]' derivation='Sum' name='[sum:Retweet_Count:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date-1]' derivation='Day-Trunc' name='[tdy:Date-1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_297519082170904576]' derivation='User' name='[usr:Calculation_297519082170904576:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Date-1:qk]' included-values='in-range'>
+            <min>#2021-01-29#</min>
+            <max>#2021-07-06#</max>
+          </filter>
+          <filter class='categorical' column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Name:nk]'>
+            <groupfilter expression='[Name]=[Parameters].[Parameter 1]' function='filter' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:Name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Tweet:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Tweet:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:Tweet:nk]' member='%null%' />
+                <groupfilter function='member' level='[none:Tweet:nk]' member='%null%' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Date-1:qk]</column>
+            <column>[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Tweet:nk]</column>
+            <column>[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.1cbchst07mfctd126ic9g0j1zk4d].[usr:Calculation_297519082170904576:qk]' value='52' />
+            <format attr='title' class='0' field='[federated.1cbchst07mfctd126ic9g0j1zk4d].[tdy:Date-1:qk]' scope='cols' value='' />
+            <encoding attr='space' class='0' field='[federated.1cbchst07mfctd126ic9g0j1zk4d].[sum:Retweet_Count:qk]' field-type='quantitative' reverse='true' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.1cbchst07mfctd126ic9g0j1zk4d].[usr:Calculation_297519082170904576:qk]' scope='rows' value='Tweet' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-visibility' value='on' />
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-color' value='#000000' />
+            <format attr='stroke-size' value='2' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:label:nk]' />
+              <lod column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Tweet:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1.3293370008468628' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1cbchst07mfctd126ic9g0j1zk4d].[usr:Calculation_297519082170904576:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:label:nk]' />
+              <lod column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Tweet:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Day of Date-11:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1cbchst07mfctd126ic9g0j1zk4d].[tdy:Date-1:qk]>]]></run>
+                <run><![CDATA[
+<Sheet name="Tweet" maxwidth="300" maxheight="300" filter="<All Fields>">
+]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1.3293370008468628' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1cbchst07mfctd126ic9g0j1zk4d].[sum:Retweet_Count:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:label:nk]' />
+              <lod column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Tweet:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1.3293370008468628' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1cbchst07mfctd126ic9g0j1zk4d].[ctd:Like_Count:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:label:nk]' />
+              <lod column='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:Tweet:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1.3293370008468628' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1cbchst07mfctd126ic9g0j1zk4d].[ctd:Like_Count:qk] + ([federated.1cbchst07mfctd126ic9g0j1zk4d].[usr:Calculation_297519082170904576:qk] + [federated.1cbchst07mfctd126ic9g0j1zk4d].[sum:Retweet_Count:qk]))</rows>
+        <cols>[federated.1cbchst07mfctd126ic9g0j1zk4d].[tdy:Date-1:qk]</cols>
+      </table>
+      <simple-id uuid='{4C20E3CD-AE85-4846-8653-169307160117}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource name='Parameters' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Cryptocurrency' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Bitcoin&quot;'>
+          <calculation class='tableau' formula='&quot;Bitcoin&quot;' />
+          <members>
+            <member value='&quot;Dogecoin&quot;' />
+            <member value='&quot;Bitcoin&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='7' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' type-v2='layout-basic' w='83700' x='800' y='1000'>
+              <zone h='24000' id='3' name='Tweets Timeline' w='83700' x='800' y='75000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='74000' id='9' name='Price Change Over Time' w='83700' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='147' h='98000' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='14700' x='84500' y='1000' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='10625' id='8' name='Tweets Timeline' pane-specification-id='1' param='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:label:nk]' type-v2='color' w='14000' x='84600' y='54000' />
+        <zone fixed-size='77' h='8250' id='14' is-fixed='true' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='15700' x='83300' y='27750' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='26' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='25' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='74000' id='9' is-fixed='true' name='Price Change Over Time' w='83700' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='77' h='8250' id='14' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='15700' x='83300' y='27750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='184' h='24000' id='3' is-fixed='true' name='Tweets Timeline' w='83700' x='800' y='75000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10625' id='8' name='Tweets Timeline' pane-specification-id='1' param='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:label:nk]' type-v2='color' w='14000' x='84600' y='54000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{616D8497-B056-43CD-AB3B-AF898F9D89AD}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='worksheet' name='Tweets Timeline'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:label:nk]' type='color' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BF48ECD8-9160-410C-A8A5-770BACA54CFF}' />
+    </window>
+    <window class='worksheet' name='Price Change Over Time'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CEE60232-C494-42A2-BA1E-46E3D29602D3}' />
+    </window>
+    <window class='worksheet' name='Tweet'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{66BC329F-607E-473E-95E4-7EECDA53515E}' />
+    </window>
+    <window class='worksheet' name='Combined'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='6' param='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:label:nk]' type='color' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{35C3907B-05D2-45F2-BB54-1463CA53E981}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Price Change Over Time'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Tweets Timeline'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{EA0F6469-ABB7-4EF8-837C-40D4BCD76456}' />
+    </window>
+    <window class='worksheet' name='Tweets Trends'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='4' param='[federated.1cbchst07mfctd126ic9g0j1zk4d].[none:label:nk]' type='color' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EB4C35CC-5A21-447F-8948-EE3D88BD71EC}' />
+    </window>
+  </windows>
+</workbook>
